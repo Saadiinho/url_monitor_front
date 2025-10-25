@@ -1,13 +1,13 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import React from "react";
+import SearchBar from "../components/SearchBar";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
-  ];
-}
+const Home: React.FC = () => {
+    return (
+        <div style={{ marginTop: "100px", textAlign: "center" }}>
+            <h1>Mon moteur de recherche</h1>
+            <SearchBar />
+        </div>
+    );
+};
 
-export default function Home() {
-  return <Welcome />;
-}
+export default Home;
